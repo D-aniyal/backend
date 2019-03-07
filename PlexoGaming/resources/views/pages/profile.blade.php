@@ -7,210 +7,122 @@ h5{
   color: azure;
 }
 </style>
-   <!-- Home -->
-   <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-   
-    
-    <div class="container">
-      <div class="col-md-3">
-         <h3 >Account Settings</h3>
-   <img src="img/round.png" alt=""> 
+ <section id="home">
+  <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          
+ <div class="container">
+   <div class="col-md-3">
+      <h3 >Account Settings</h3>
+<img src="img/round.png" alt=""> 
 
 <br>
- 
-   
-  </div>
- </div>
-   
-    <!-- Home Content -->
-    <div id="signup" class="py-3 ml-auto">
-        
-        <div class="loginBox">
-   
+<br>  
+<div class="form-group">
+<input type="submit" value="Submit" class="btn btn-outline-danger btn-block">
+</div>
 
-            <h2>Profile</h2>
-            <form  method="POST" action="{{ url('/addProfile') }}">
-              @csrf
-                <div class="row">
-                  <h5>Platform GameTags</h5>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input name="gametag1" placeholder="e.g xbox" id="name" type="First Name" class="form-control{{ $errors->has('gametag1') ? ' is-invalid' : '' }}" name="name" value="{{ old('gametag1') }}" required autofocus>
-                      
-                        @if ($errors->has('gametag1'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag1') }}</strong>
-                        </span>
-                    @endif
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input name="gametag2" id="name"  placeholder="e.g ps4" type="Last name" class="form-control{{ $errors->has('gametag2') ? ' is-invalid' : '' }}"  value="{{ old('gametag2') }}"  required >
-                      
-                        @if ($errors->has('gametag2'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag2') }}</strong>
-                        </span>
-                    @endif
-                    
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input name="gametag3" placeholder="" id="name" type="First Name" class="form-control{{ $errors->has('gametag3') ? ' is-invalid' : '' }}" name="name" value="{{ old('gametag3') }}" required autofocus>
-                      
-                        @if ($errors->has('gametag3'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag3') }}</strong>
-                        </span>
-                    @endif
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input  id="name" placeholder=""  type="Last name" class="form-control{{ $errors->has('gametag4') ? ' is-invalid' : '' }}" name="gametag4" value="{{ old('gametag4') }}"  required >
-                      
-                        @if ($errors->has('gametag4'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag4') }}</strong>
-                        </span>
-                    @endif
-                    
-                      </div>
-                    </div>
-
-
-                    <h5>Social Media Accounts</h5>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input name="gametag5" placeholder="e.g twitter" id="name" type="First Name" class="form-control{{ $errors->has('gametag5') ? ' is-invalid' : '' }}" name="name" value="{{ old('gametag5') }}" required autofocus>
-                      
-                        @if ($errors->has('gametag5'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag5') }}</strong>
-                        </span>
-                    @endif
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                          <input name="gametag6" placeholder="e.g facebook" id="name" type="First Name" class="form-control{{ $errors->has('gametag6') ? ' is-invalid' : '' }}" name="name" value="{{ old('gametag6') }}" required autofocus>
-                        
-                          @if ($errors->has('gametag6'))
-                          <span class="invalid-feedback" role="alert">
-                              <strong>{{ $errors->first('gametag6') }}</strong>
-                          </span>
-                      @endif
-                        </div>
-                      </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input name="gametag7" placeholder="" id="name" type="First Name" class="form-control{{ $errors->has('gametag7') ? ' is-invalid' : '' }}" name="name" value="{{ old('gametag7') }}" required autofocus>
-                      
-                        @if ($errors->has('gametag7'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag7') }}</strong>
-                        </span>
-                    @endif
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input  id="name" placeholder=""  type="Last name" class="form-control{{ $errors->has('gametag8') ? ' is-invalid' : '' }}" name="gametag8" value="{{ old('gametag8') }}"  required >
-                      
-                        @if ($errors->has('gametag8'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag8') }}</strong>
-                        </span>
-                    @endif
-                    
-                      </div>
-                    </div>
-
-                    <h5>ID # & Paypal Email</h5>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <input name="gametag9" placeholder="Enter paypal Email" id="email" type="email" class="form-control{{ $errors->has('gametag9') ? ' is-invalid' : '' }}" value="{{ old('gametag9') }}" required>
-                      
-                        @if ($errors->has('gametag9'))
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $errors->first('gametag9') }}</strong>
-                        </span>
-                    @endif
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                          <input name="gametag10" placeholder="Enter id" id="email" type="email" class="form-control{{ $errors->has('gametag10') ? ' is-invalid' : '' }}" value="{{ old('gametag10') }}" required>
-                        
-                          @if ($errors->has('gametag10'))
-                          <span class="invalid-feedback" role="alert">
-                              <strong>{{ $errors->first('gametag10') }}</strong>
-                          </span>
-                      @endif
-                        </div>
-                      </div>
-
-                      <div class="col-md-6">
-                          <div class="form-group">
-                            <input name="profile_pic" placeholder="" id="email" type="file" class="form-control{{ $errors->has('profile_pic') ? ' is-invalid' : '' }}" value="{{ old('profile_pic') }}" required>
-                          
-                            @if ($errors->has('profile_pic'))
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('profile_pic') }}</strong>
-                            </span>
-                        @endif
-                          </div>
-                        </div>
-                  
-                   
-                  </div>
-                  
-                    <div class="col-md-6">
-                      
-                      <div class="form-group" >
-                        <div class="col-md-6 offset-md-4">
-                          <button type="submit" class="btn btn-primary">
-                              {{ __('submit') }}
-                          </button>
-                      </div>
-                        </div>
-                       
-                    </div>
-                  </div>
-              
-            
-            </form>
+</div>
+</div>
+  <!-- Home Content -->
+  <div id="signup" class="py-3 ml-auto">
+  
+      <div class="loginBox1">
+          <br>
+          <br>
+          <br>
+         <br>
+          <br>
+      
+<div class="rom">
+<div class="col-md-3">
+          <h2>General</h2>
           </div>
-        <br>
- 
-
+<div class="col-md-6">
+  <h2>Profile</h2>
     </div>
-    <br>
-    <br>
+</div>
+<br>
+<br>
+<br>
+<br>
+          <form>
+              
+                  <p>Platform GameTags</p>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                    
+                      <input type="text" name="name" placeholder="XBOX" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="name" placeholder="PSN" required>
+                    </div>
+                  </div>
+                 
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="name" placeholder="???"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <input type="text" name="name" placeholder="???"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                      </div>
+                   </div>
+
+                   
+                  <p>Social Media Accounts</p>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                    
+                      <input type="text" name="name" placeholder="TWITTER" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="name" placeholder="FACEBOOK" required>
+                    </div>
+                  </div>
+                 
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" name="name" placeholder="TWITCH"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <input type="text" name="name" placeholder="YOUTUBE"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                      </div>
+                   </div>
+                   <p>Payment Information</p>
+                   <div class="col-md-6">
+                     <div class="form-group">
+                     
+                       <input type="text" name="name" placeholder="Paypal Email" required>
+                     </div>
+                   </div>
+                   <div class="col-md-6">
+                    
+                      <div class="form-group">
+                          <input type="submit" value="Submit" class="btn btn-outline-danger btn-block">
+                      </div>
+                    </div>
+          </form>
+        </div>
   </div>
-
-
 </section>
-  <!-- CONTACT SECTION -->
+<!-- Home Ends -->
+<!-- CONTACT SECTION -->
+<br>
+<br>
+<br>
  <br>
  
     
