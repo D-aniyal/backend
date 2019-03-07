@@ -34,33 +34,60 @@
         <div class="loginBox">
    
 
-            <h2>SIGNUP</h2>
-            <form>
+            <h2>Register</h2>
+            <form  method="POST" action="{{ route('register') }}">
+              @csrf
                 <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="First Name" name="name" placeholder="First Name" required>
+                        <input name="name" placeholder="First Name" id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                      
+                        @if ($errors->has('name'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('name') }}</strong>
+                        </span>
+                    @endif
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="Last Name" name="name" placeholder="Last Name" required>
+                        <input  id="name" type="name" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}"  placeholder="Last Name" required >
+                      
+                        @if ($errors->has('lastname'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('lastname') }}</strong>
+                        </span>
+                    @endif
+                    
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="email" name="email" placeholder="Enter Email" required>
+                        <input name="email" placeholder="Enter Email" id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" value="{{ old('email') }}" required>
+                      
+                        @if ($errors->has('email'))
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
-                        <input type="password" name="password" placeholder="Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                        <input type="password" name="password" placeholder="Enter Password" id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required>
+                      
+                        @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
                       </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="password" name="password" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-                        </div>
+                            <input type="password" name="password" placeholder="Confirm Password" id="password-confirm"  class="form-control" name="password_confirmation" required>
+                        
+                          </div>
                      </div>
                   </div>
                   <div class="row">
@@ -68,22 +95,29 @@
                         
                       <div class="form-group">
                             Date of Birth:
-                       <input class="form-control" placeholder="Date of Birth" type="date" name="bday"></input>
+                       <input  placeholder="Date of Birth"  id="name"  class="form-control{{ $errors->has('dob') ? ' is-invalid' : '' }}" name="dob" value="{{ old('dob') }}" required autofocus placeholder="Date of Birth" type="date" name="bday"></input>
+                      
+                       @if ($errors->has('dob'))
+                       <span class="invalid-feedback" role="alert">
+                           <strong>{{ $errors->first('dob') }}</strong>
+                       </span>
+                   @endif
                       </div>
                     </div>
                     <div class="col-md-12">
                       
                       <div class="form-group" >
-                          <a href="/PlexoGaming/public/mockedlogin" class="btn btn-info" role="button">SIGNUP</a>
-                    <!--
-                          <input type="submit"  value="SIGNUP" class="btn btn-outline-danger btn-block">
-                        -->
+                        <div class="col-md-6 offset-md-4">
+                          <button type="submit" class="btn btn-primary">
+                              {{ __('Register') }}
+                          </button>
+                      </div>
                         </div>
                        
                     </div>
                   </div>
               
-              <a href="/PlexoGaming/public/login">Already have an account?   <u>LOGIN</u></a>
+              <a href="http://localhost/PlexoGaming/public/login">Already have an account?   <u>LOGIN</u></a>
             </form>
           </div>
         <br>

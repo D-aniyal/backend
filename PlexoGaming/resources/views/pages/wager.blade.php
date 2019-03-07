@@ -44,7 +44,7 @@ color: azure
                     <div >
                       <div   class="d-flex flex-row text-white align-items-stretch text-center ml-auto">
 
-                        <a href="/PlexoGaming/public/match" class="btn btn-primary ">Create Match</a>
+                        <a href="{{url('/gamecategory')}}" class="btn btn-primary ">Create Match</a>
                       
                       </div>
                     </div>
@@ -65,6 +65,7 @@ color: azure
                         <img src="img/PC.jpeg" class="pull-left" alt="" height="42" width="42"> Game Mode <p class="pull-right">Singles/Doubles <br> timing $$$
                         </p>
                       </h4>
+                      <p ><a href="{{url('/match')}}">view match</a></p>
                       <p >console</p>
                     </div>
                   </div>

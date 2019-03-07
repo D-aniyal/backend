@@ -110,7 +110,7 @@
     </div>
    
     <div style="background: rgb(70, 69, 69)" class="modal-footer">
-       <a href ="Tournament (2).html">
+       <a href ="{{url('/wager')}}">
       <button type="button" class="btn btn-primary">Confirm</button>
     </a>
     </div>

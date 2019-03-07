@@ -22,7 +22,7 @@
 <div class="container p-5">
 	<div class="row">
 		<div class="col-sm-12 mb-3">
-			<h3 Align ="center">Schedule Game Matches</h3>
+			<h3 Align ="center">Select a Game</h3>
 		</div>
 		<div class="col-sm-12 ">
 			<div class="category-filter pb-5 " width="50%">
@@ -49,7 +49,7 @@
 
 	<div class="row">
 		<div class="col-sm-6 col-md-4 col-lg-3 filter portraits mb-5">
-      <a href="http://localhost/PlexoGaming/public/Tournament1">
+      <a href="{{url('/AllPlatform1')}}">
       <img src="img/gta.jpg" width ="250px" height ="250px" class="img-fluid">
       </a>
 		</div>
@@ -102,6 +102,8 @@ $('.category-filter .category-button').categoryFilter();
   })();
 
 </script>
+
+
 
 
 

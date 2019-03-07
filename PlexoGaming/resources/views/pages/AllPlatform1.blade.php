@@ -123,7 +123,12 @@
                       <br>
                     
                   </div>
-               
+                  <div class="col-md-2">
+
+                  </div>
+                  <div class="col-md-2">
+                    <a href="{{url('/createteam')}}" class="btn btn-primary btn-block mt-2">Next</a>
+                  </div>
                
               </div>
                          
