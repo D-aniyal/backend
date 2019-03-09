@@ -20,7 +20,10 @@ h5{
    <div class="col-md-3">
       <h3 >Account Settings</h3>
 <img src="img/round.png" alt=""> 
-
+<div class="upload-btn-wrapper">
+   
+    <input type="file" name="myfile" />
+  </div>
 <br>
 <br>  
 <div class="form-group">
