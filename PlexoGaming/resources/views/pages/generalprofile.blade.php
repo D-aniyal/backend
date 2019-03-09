@@ -31,7 +31,9 @@
         
             </div>
 <div class="col-md-3">
+    <a href="{{url('/profile')}}">
     <h2> Profile</h2>
+    </a>
       </div>
 </div>
 <br>

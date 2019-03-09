@@ -41,11 +41,15 @@ h5{
       
 <div class="rom">
 <div class="col-md-3">
+  <a href="{{url('/generalprofile')}}">
           <h2>General</h2>
+  </a>
           </div>
 <div class="col-md-6">
+  
   <h2>Profile</h2>
-    </div>
+   
+</div>
 </div>
 <br>
 <br>
