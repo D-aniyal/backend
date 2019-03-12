@@ -10,15 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+
+Auth::routes();
 
 Route::get('/', 'PagesController@index');
-Route::get('/login', 'PagesController@login');
-Route::get('/signup', 'PagesController@signup');
+
 Route::get('/support', 'PagesController@support');
 Route::get('/findmatch', 'PagesController@findmatch');
 Route::get('/shop', 'PagesController@shop');
@@ -46,3 +42,5 @@ Route::get('/generalprofile', 'PagesController@generalprofile');
 Route::get('/mockedlogin', 'PagesController@mockedlogin');
 
 Route::resource('posts', 'PostsController');
+
+Route::get('/home', 'HomeController@index')->name('home');
